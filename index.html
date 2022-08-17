@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,68 +16,90 @@
   </head>
   <body>
     <div class="container">
-      <form id="search-form">
-        <input
-          type="text"
-          id="city-input"
-          placeholder="Enter city name"
-          autofocus="on"
-        />
-        <div class="buttons">
-          <span>
-            <button type="submit" class="btn btn-outline-warning search-form">
-              SEARCH
-            </button>
-          </span>
-          <span>
-            <button
-              type="button"
-              id="geolocation"
-              class="btn btn-outline-primary current-location"
-            >
-              LOCATION
-            </button>
-          </span>
+      <div class="weather-app">
+        <header>
+          <div class="row highlighted-cities">
+            <div class="col-2 header-city">
+              <a href="#" class="cities" id="toronto">Toronto</a>
+            </div>
+            <div class="col-2 header-city">
+              <a href="#" class="cities" id="new-york">New York</a>
+            </div>
+            <div class="col-2 header-city">
+              <a href="#" class="cities" id="london">London</a>
+            </div>
+            <div class="col-2 header-city">
+              <a href="#" class="cities" id="berlin">Berlin</a>
+            </div>
+            <div class="col-2 header-city">
+              <a href="#" class="cities" id="kyiv">Kyiv</a>
+            </div>
+          </div>
+        </header>
+
+        <form id="search-form">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter city name"
+            autofocus="on"
+          />
+          <div class="buttons">
+            <span>
+              <button type="submit" class="btn btn-outline-warning search-form">
+                SEARCH
+              </button>
+            </span>
+            <span>
+              <button
+                type="button"
+                id="geolocation"
+                class="btn btn-outline-primary current-location"
+              >
+                LOCATION
+              </button>
+            </span>
+          </div>
+        </form>
+        <br />
+        <h1 id="city"></h1>
+        <div class="row">
+          <div class="col-3 temperature">
+            <span id="degrees"></span>
+            <br />
+            <span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+          </div>
+          <div class="col-3 date" id="current-date"></div>
+          <div class="col-3 feels">
+            <span class="first"> Humidity: % </span>
+            <span class="second"> Wind: km/h </span>
+            <span class="third"> Feels like: ° </span>
+          </div>
         </div>
-      </form>
-      <br />
-      <h1 id="city"></h1>
-      <div class="row">
-        <div class="col-3 temperature">
-          <span id="degrees"></span>
-          <br />
-          <span class="units">
-            <a href="#" id="celsius-link">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
-          </span>
-        </div>
-        <div class="col-3 date" id="current-date"></div>
-        <div class="col-3 feels">
-          <span class="first"> Humidity: % </span>
-          <span class="second"> Wind: km/h </span>
-          <span class="third"> Feels like: ° </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-2">
-          Monday
-          <br />
-          🌥
-          <br />
-          14°-23°
-        </div>
-        <div class="col-2">Tuesday <br />🌥 <br />12°-22°</div>
-        <div class="col-2">
-          Wednesday <br />🌥 <br />
-          13°-21°
-        </div>
-        <div class="col-2">
-          Thursday <br />🌥 <br />
-          14°-26°
-        </div>
-        <div class="col-2">
-          Friday <br />🌥 <br />
-          16°-26°
+        <div class="row">
+          <div class="col-2">
+            Monday
+            <br />
+            🌥
+            <br />
+            14°-23°
+          </div>
+          <div class="col-2">Tuesday <br />🌥 <br />12°-22°</div>
+          <div class="col-2">
+            Wednesday <br />🌥 <br />
+            13°-21°
+          </div>
+          <div class="col-2">
+            Thursday <br />🌥 <br />
+            14°-26°
+          </div>
+          <div class="col-2">
+            Friday <br />🌥 <br />
+            16°-26°
+          </div>
         </div>
       </div>
     </div>
