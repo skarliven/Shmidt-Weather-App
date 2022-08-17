@@ -12,6 +12,10 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/2b3155d47c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -37,62 +41,103 @@
           </div>
         </header>
 
-         <div class="row search-row justify-content-center">
-            <div class="col-7">
-              <form class="mt-3 mb-3 search-form" id="search-city-form">
-                <div class="row gx-0">
-                  <div class="col">
-                    <input
-                      type="text"
-                      placeholder="Enter city name"
-                      class="form-control border-0"
-                      id="city-input"
-                      autocomplete="off"
-                      autofocus="on"
-                    />
-                  </div>
-
-                  <div class="col-auto px-1 buttons">
-                    <button
-                      type="submit"
-                      class="btn btn-outline-primary btn-block"
-                      id="search-button"
-                    >
-                      SEARCH
-                    </button>
-                  </div>
-
-                  <div class="col-auto">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary btn-block current-location"
-                      id="geolocation"
-                    >
-                    LOCATION
-                    </button>
-                  </div>
+        <div class="row search-row justify-content-center">
+          <div class="col-9">
+            <form class="mt-3 mb-3 search-form" id="search-city-form">
+              <div class="row gx-0">
+                <div class="col">
+                  <input
+                    type="text"
+                    placeholder="Enter city name"
+                    class="form-control border-0"
+                    id="city-input"
+                    autocomplete="off"
+                    autofocus="on"
+                  />
                 </div>
-              </form>
-            </div>
 
-        <h1 id="city"></h1>
-        <div class="row">
-          <div class="col-3 temperature">
-            <span id="degrees"></span>
-            <br />
-            <span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-          </div>
-          <div class="col-3 date" id="current-date"></div>
-          <div class="col-3 feels">
-            <span class="first"> Humidity: % </span>
-            <span class="second"> Wind: km/h </span>
-            <span class="third"> Feels like: ° </span>
+                <div class="col-auto px-1 buttons">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-primary btn-block"
+                    id="search-button"
+                  >
+                    <i class="fas fa-search"></i> SEARCH
+                  </button>
+                </div>
+
+                <div class="col-auto">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-block current-location"
+                    id="geolocation"
+                  >
+                    <i class="fas fa-map-marker-alt me-1"> </i> LOCATION
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="row">
+
+        <div class="weather-data">
+          <div class="location-time">
+            <ul>
+              <li class="city">
+                <h1 id="city">New Delhi</h1>
+              </li>
+              <li class="date-time">
+                <h5>
+                  <span class="current-date" id="todays-date"
+                    >Friday, June 24th, 2022</span
+                  >
+                </h5>
+              </li>
+              <li class="current-time">
+                <h6>
+                  <span id="todays-time">4:23</span> <span id="am-pm">pm</span>
+                </h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row weather-details">
+          <div class="col-6 mt-0">
+            <div
+              class="d-flex justify-content-center align-items-center current-city-temp"
+            >
+              <img
+                src="src/images/Weather_Two Color.svg"
+                alt="Sunny-Animated"
+                id="icon"
+                class="sunny-icon"
+                width="180"
+              />
+              <div class="current-weather-temp">
+                <span id="degrees">12</span>
+                <span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 weather-details mt-4">
+            <div class="d-flex justify-content-center align-items-center">
+              <ul class="feels">
+                <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+                <li class="wind">Wind: <span id="wind-speed"></span> km/h</li>
+                <li class="temp">
+                  Feels like: <span id="feels-like-temp"></span>ºC
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row justify-content-center">
           <div class="col-2">
             Monday
             <br />
