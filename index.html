@@ -18,7 +18,7 @@
     <div class="container">
       <div class="weather-app">
         <header>
-          <div class="row highlighted-cities">
+          <div class="row highlighted-cities justify-content-center">
             <div class="col-2 header-city">
               <a href="#" class="cities" id="toronto">Toronto</a>
             </div>
@@ -37,31 +37,44 @@
           </div>
         </header>
 
-        <form id="search-form">
-          <input
-            type="text"
-            id="city-input"
-            placeholder="Enter city name"
-            autofocus="on"
-          />
-          <div class="buttons">
-            <span>
-              <button type="submit" class="btn btn-outline-warning search-form">
-                SEARCH
-              </button>
-            </span>
-            <span>
-              <button
-                type="button"
-                id="geolocation"
-                class="btn btn-outline-primary current-location"
-              >
-                LOCATION
-              </button>
-            </span>
-          </div>
-        </form>
-        <br />
+         <div class="row search-row justify-content-center">
+            <div class="col-7">
+              <form class="mt-3 mb-3 search-form" id="search-city-form">
+                <div class="row gx-0">
+                  <div class="col">
+                    <input
+                      type="text"
+                      placeholder="Enter city name"
+                      class="form-control border-0"
+                      id="city-input"
+                      autocomplete="off"
+                      autofocus="on"
+                    />
+                  </div>
+
+                  <div class="col-auto px-1 buttons">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      id="search-button"
+                    >
+                      SEARCH
+                    </button>
+                  </div>
+
+                  <div class="col-auto">
+                    <button
+                      type="button"
+                      class="btn btn-secondary btn-block current-location"
+                      id="geolocation"
+                    >
+                    LOCATION
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
         <h1 id="city"></h1>
         <div class="row">
           <div class="col-3 temperature">
