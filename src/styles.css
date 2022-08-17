@@ -1,0 +1,15 @@
+body {
+  background: url(images/AdobeStock_292792584.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 30px;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  background-color: hsla(206, 100%, 93%, 0.55);
+}
