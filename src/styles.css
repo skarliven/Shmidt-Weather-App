@@ -8,8 +8,64 @@ body {
 .weather-app {
   max-width: 700px;
   margin: 100px auto;
-  padding: 30px;
+  padding: 25px;
   border: 3px solid #ffffff;
   border-radius: 25px;
   background-color: hsla(206, 100%, 93%, 0.55);
+}
+
+div.header-city {
+  display: inline;
+  border-left: 1px solid white;
+  font-weight: 220;
+  font-size: 15px;
+  margin-bottom: 7px;
+  margin-left: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+}
+
+.ukraine {
+  border-right: 1px solid #ffffff;
+}
+
+a.cities {
+  color: #6c757d;
+  filter: drop-shadow(2px 2px 2px #ffffff);
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+a.cities:hover {
+  cursor: pointer;
+  color: black;
+  filter: drop-shadow(2px 2px 1px #ffffff);
+}
+
+.search-row {
+  font-family: "Playfair Display", serif;
+}
+
+.search-result {
+  list-style: none;
+  display: block;
+  margin-bottom: 4px;
+  margin-left: 50px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #6c757d;
+  font-family: "Quicksand", sans-serif;
+}
+
+#icon {
+  display: block;
+  margin-left: 35px;
+}
+
+#degrees {
+  font-family: "Quicksand", sans-serif;
+  font-size: 56px;
+  margin-top: 0;
+  padding: 0;
 }
