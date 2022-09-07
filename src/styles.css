@@ -26,7 +26,7 @@ div.header-city {
   font-family: "Playfair Display", serif;
 }
 
-.ukraine {
+.india {
   border-right: 1px solid #ffffff;
 }
 
@@ -35,6 +35,7 @@ a.cities {
   filter: drop-shadow(2px 2px 2px #ffffff);
   text-decoration: none;
   transition: all 200ms ease-in-out;
+  font-weight: 300;
 }
 
 a.cities:hover {
@@ -56,6 +57,7 @@ a.cities:hover {
   text-transform: uppercase;
   color: #6c757d;
   font-family: "Quicksand", sans-serif;
+  font-weight: 700;
 }
 
 #icon {
@@ -65,7 +67,17 @@ a.cities:hover {
 
 #degrees {
   font-family: "Quicksand", sans-serif;
-  font-size: 56px;
+  font-size: 64px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.feels {
+  list-style: none;
   margin-top: 0;
   padding: 0;
+  color: #6c757d;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
 }
