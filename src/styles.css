@@ -5,9 +5,12 @@ body {
   background-size: cover;
 }
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 700px;
   margin: 100px auto;
+}
+
+.weather-app {
   padding: 25px;
   border: 3px solid #ffffff;
   border-radius: 25px;
@@ -35,7 +38,7 @@ a.cities {
   filter: drop-shadow(2px 2px 2px #ffffff);
   text-decoration: none;
   transition: all 200ms ease-in-out;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 a.cities:hover {
@@ -67,17 +70,46 @@ a.cities:hover {
 
 #degrees {
   font-family: "Quicksand", sans-serif;
-  font-size: 64px;
+  font-size: 62px;
   font-weight: 400;
   color: #6c757d;
+  line-height: 0;
+}
+
+.units {
+  position: relative;
+  font-size: 18px;
+  top: -30px;
+  color: #ffffff;
+}
+
+a.temp-dif {
+  color: #6c757d;
+  filter: drop-shadow(2px 2px 2px #ffffff);
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  font-weight: 400;
+}
+
+a.temp-dif:hover {
+  cursor: pointer;
+  color: black;
+  filter: drop-shadow(2px 2px 1px #ffffff);
 }
 
 .feels {
   list-style: none;
-  margin-top: 0;
   padding: 0;
   color: #6c757d;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   font-size: 18px;
+}
+
+small {
+  margin-top: 12px;
+  display: block;
+  text-align: center;
+  color: #6c757d;
+  font-weight: 400;
 }

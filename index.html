@@ -28,160 +28,165 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <header>
-          <div class="row highlighted-cities justify-content-center">
-            <div class="col-2 header-city">
-              <a href="#" class="cities" id="toronto"> Toronto</a>
-            </div>
-            <div class="col-2 header-city">
-              <a href="#" class="cities" id="new-york">New York</a>
-            </div>
-            <div class="col-2 header-city">
-              <a href="#" class="cities" id="london">London</a>
-            </div>
-            <div class="col-2 header-city">
-              <a href="#" class="cities" id="berlin">Berlin</a>
-            </div>
-            <div class="col-2 header-city india">
-              <a href="#" class="cities" id="new-delhi">New Delhi</a>
-            </div>
-          </div>
-        </header>
-
-        <div class="row search-row justify-content-center">
-          <div class="col-9">
-            <form class="mt-3 mb-3 search-form" id="search-city-form">
-              <div class="row gx-0">
-                <div class="col">
-                  <input
-                    type="text"
-                    placeholder="Enter city name"
-                    class="form-control border-0"
-                    id="city-input"
-                    autocomplete="off"
-                    autofocus="on"
-                  />
-                </div>
-
-                <div class="col-auto px-1 buttons">
-                  <button
-                    type="submit"
-                    class="btn btn-outline-primary btn-block"
-                    id="search-button"
-                  >
-                    <i class="fas fa-search"></i> SEARCH
-                  </button>
-                </div>
-
-                <div class="col-auto">
-                  <button
-                    type="button"
-                    class="btn btn-outline-secondary btn-block current-location"
-                    id="geolocation"
-                  >
-                    <i class="fas fa-map-marker-alt me-1"> </i> LOCATION
-                  </button>
-                </div>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <header>
+            <div class="row highlighted-cities justify-content-center">
+              <div class="col-2 header-city">
+                <a href="#" class="cities" id="new-york"> New York</a>
               </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="weather-data">
-          <div class="location-time">
-            <ul class="search-result">
-              <li class="city">
-                <h1 id="city">Kyiv</h1>
-              </li>
-              <li class="date-time">
-                <h5>
-                  <span class="current-date" id="todays-date"
-                    >Friday, June 24, 2022</span
-                  >
-                </h5>
-              </li>
-              <li class="current-time">
-                <h6>
-                  <span id="todays-time">4:23</span> <span id="am-pm">pm</span>
-                </h6>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row weather-details">
-          <div class="col-6 mt-0">
-            <div
-              class="d-flex justify-content-center align-items-center current-city-temp"
-            >
-              <img
-                src="src/images/Weather_Two Color.svg"
-                alt="Sunny-Animated"
-                id="icon"
-                class="sunny-icon"
-                width="180"
-              />
-              <div class="current-weather-temp">
-                <span id="degrees">12</span>
-                <br />
-                <span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span>
+              <div class="col-2 header-city">
+                <a href="#" class="cities" id="toronto">Toronto</a>
+              </div>
+              <div class="col-2 header-city">
+                <a href="#" class="cities" id="london">London</a>
+              </div>
+              <div class="col-2 header-city">
+                <a href="#" class="cities" id="berlin">Berlin</a>
+              </div>
+              <div class="col-2 header-city india">
+                <a href="#" class="cities" id="new-delhi">New Delhi</a>
               </div>
             </div>
+          </header>
+
+          <div class="row search-row justify-content-center">
+            <div class="col-9">
+              <form class="mt-3 mb-3 search-form" id="search-city-form">
+                <div class="row gx-0">
+                  <div class="col">
+                    <input
+                      type="text"
+                      placeholder="Enter city name"
+                      class="form-control border-0"
+                      id="city-input"
+                      autocomplete="off"
+                      autofocus="on"
+                    />
+                  </div>
+
+                  <div class="col-auto px-1 buttons">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-primary btn-block"
+                      id="search-button"
+                    >
+                      <i class="fas fa-search"></i> SEARCH
+                    </button>
+                  </div>
+
+                  <div class="col-auto">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary btn-block current-location"
+                      id="geolocation"
+                    >
+                      <i class="fas fa-map-marker-alt me-1"> </i> LOCATION
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
 
-          <div class="col-6 weather-details mt-4">
-            <div class="d-flex justify-content-center align-items-center">
-              <ul class="feels">
-                <li class="humidity">Humidity: <span id="humidity"></span>%</li>
-                <li class="wind">Wind: <span id="wind-speed"></span> km/h</li>
-                <li class="temp">
-                  Feels like: <span id="feels-like-temp"></span>ºC
+          <div class="weather-data">
+            <div class="location-time">
+              <ul class="search-result">
+                <li class="city">
+                  <h1 id="city">Kyiv</h1>
+                </li>
+                <li class="date-time">
+                  <h5>
+                    <span class="current-date" id="todays-date"
+                      >Friday, June 24, 2022</span
+                    >
+                  </h5>
+                </li>
+                <li class="current-time">
+                  <h6>
+                    <span id="todays-time">4:23</span>
+                    <span id="am-pm">pm</span>
+                  </h6>
                 </li>
               </ul>
             </div>
           </div>
+
+          <div class="row weather-details">
+            <div class="col-7 mt-0">
+              <div
+                class="d-flex justify-content-center align-items-center current-city-temp"
+              >
+                <img
+                  src="src/images/Weather_Two Color.svg"
+                  alt="Umbrella Man"
+                  id="icon"
+                  class="weather-icon"
+                  width="180"
+                />
+                <div class="current-weather-temp">
+                  <span id="degrees">12</span>
+                  <span class="units">
+                    <a href="#" class="temp-dif" id="celsius-link">°C</a> |
+                    <a href="#" class="temp-dif" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 weather-details mt-4">
+              <div class="d-flex justify-content-center align-items-center">
+                <ul class="feels">
+                  <li class="humidity">
+                    Humidity: <span id="humidity"></span>%
+                  </li>
+                  <li class="wind">Wind: <span id="wind-speed"></span> km/h</li>
+                  <li class="temp">
+                    Feels like: <span id="feels-like-temp"></span>ºC
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row justify-content-center">
+            <div class="col-2">
+              Monday
+              <br />
+              🌥
+              <br />
+              14°-23°
+            </div>
+            <div class="col-2">Tuesday <br />🌥 <br />12°-22°</div>
+            <div class="col-2">
+              Wednesday <br />🌥 <br />
+              13°-21°
+            </div>
+            <div class="col-2">
+              Thursday <br />🌥 <br />
+              14°-26°
+            </div>
+            <div class="col-2">
+              Friday <br />🌥 <br />
+              16°-26°
+            </div>
+          </div>
         </div>
-        <hr />
-        <div class="row justify-content-center">
-          <div class="col-2">
-            Monday
-            <br />
-            🌥
-            <br />
-            14°-23°
-          </div>
-          <div class="col-2">Tuesday <br />🌥 <br />12°-22°</div>
-          <div class="col-2">
-            Wednesday <br />🌥 <br />
-            13°-21°
-          </div>
-          <div class="col-2">
-            Thursday <br />🌥 <br />
-            14°-26°
-          </div>
-          <div class="col-2">
-            Friday <br />🌥 <br />
-            16°-26°
-          </div>
-        </div>
+        <small>
+          Coded by Victoria Shmidt,
+          <a
+            href="https://github.com/ishkanderka/Shmidt-Weather-App"
+            target="_blank"
+            >open-sourced on GitHub</a
+          >, and
+          <a
+            href="https://exquisite-croissant-cd2cb7.netlify.app/"
+            target="_blank"
+            >hosted on Netlify</a
+          >
+        </small>
       </div>
     </div>
-    <small>
-      This project was coded by Victoria Shmidt and is
-      <a
-        href="https://github.com/ishkanderka/Shmidt-Weather-App"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://exquisite-croissant-cd2cb7.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </small>
     <script src="src/index.js"></script>
   </body>
 </html>
