@@ -1,3 +1,65 @@
+//Feature #1: Header City Link Display//
+//New York//
+function getNy(event) {
+  event.preventDefault();
+
+  let apiKey = "171ddbb0656a18a2767a1d21dcc89d04";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=new york&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+let newYorkLink = document.querySelector("#new-york");
+newYorkLink.addEventListener("click", getNy);
+
+//Toronto//
+function getToronto(event) {
+  event.preventDefault();
+
+  let apiKey = "171ddbb0656a18a2767a1d21dcc89d04";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=toronto&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+let torontoLink = document.querySelector("#toronto");
+torontoLink.addEventListener("click", getToronto);
+
+//London//
+function getLondon(event) {
+  event.preventDefault();
+
+  let apiKey = "171ddbb0656a18a2767a1d21dcc89d04";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=london&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+let londonLink = document.querySelector("#london");
+londonLink.addEventListener("click", getLondon);
+
+//Berlin//
+function getBerlin(event) {
+  event.preventDefault();
+
+  let apiKey = "171ddbb0656a18a2767a1d21dcc89d04";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=berlin&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+let berlinLink = document.querySelector("#berlin");
+berlinLink.addEventListener("click", getBerlin);
+
+//New Delhi//
+function getNd(event) {
+  event.preventDefault();
+
+  let apiKey = "171ddbb0656a18a2767a1d21dcc89d04";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=new delhi&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+let newDelhiLink = document.querySelector("#new-delhi");
+newDelhiLink.addEventListener("click", getNd);
+
+//API//
 function showWeather(response) {
   let currentTemp = document.querySelector("#degrees");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
