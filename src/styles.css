@@ -57,10 +57,16 @@ a.cities:hover {
   margin-bottom: 4px;
   margin-left: 50px;
   text-align: left;
-  text-transform: uppercase;
   color: #6c757d;
   font-family: "Quicksand", sans-serif;
-  font-weight: 700;
+}
+
+#updated::first-letter {
+  text-transform: capitalize;
+}
+
+#todays-date {
+  text-transform: uppercase;
 }
 
 #icon {
