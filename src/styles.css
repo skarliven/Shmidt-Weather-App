@@ -61,17 +61,24 @@ a.cities:hover {
   font-family: "Quicksand", sans-serif;
 }
 
+#city {
+  margin-bottom: 0.5%;
+}
 #updated::first-letter {
   text-transform: capitalize;
 }
-
-#todays-date {
-  text-transform: uppercase;
+#todays-date,
+#todays-time {
+  text-transform: capitalize;
 }
 
+#description {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 #icon {
   display: block;
-  margin-left: 35px;
+  margin-left: 50px;
 }
 
 #degrees {
