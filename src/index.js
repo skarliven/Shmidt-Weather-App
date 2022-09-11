@@ -143,4 +143,12 @@ function searchCity(city) {
   axios.get(apiUrl).then(showWeather);
 }
 
+function enterCity(event) {
+  event.preventDefault();
+  let input = document.querySelector("#city-input");
+  searchCity(input.value);
+}
 searchCity("Kyiv");
+
+let searchForm = document.querySelector("#search-city-form");
+searchForm.addEventListener("submit", enterCity);
