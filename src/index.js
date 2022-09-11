@@ -115,6 +115,7 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   let currentTemp = document.querySelector("#degrees");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemp = response.data.main.temp;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind-speed");
@@ -148,7 +149,31 @@ function enterCity(event) {
   let input = document.querySelector("#city-input");
   searchCity(input.value);
 }
-searchCity("Kyiv");
 
 let searchForm = document.querySelector("#search-city-form");
 searchForm.addEventListener("submit", enterCity);
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#degrees");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(fahrenheitTemp);
+}
+let celsiusTemp = null;
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#degrees");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  currentTemp.innerHTML = Math.round(celsiusTemp);
+}
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+searchCity("Kyiv");

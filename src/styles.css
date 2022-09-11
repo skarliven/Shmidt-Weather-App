@@ -96,7 +96,7 @@ a.cities:hover {
   color: #ffffff;
 }
 
-a.temp-dif {
+a.temp-difference {
   color: #6c757d;
   filter: drop-shadow(2px 2px 2px #ffffff);
   text-decoration: none;
@@ -104,8 +104,8 @@ a.temp-dif {
   font-weight: 400;
 }
 
-a.temp-dif:hover {
-  cursor: pointer;
+a.temp-difference:hover {
+  cursor: default;
   color: black;
   filter: drop-shadow(2px 2px 1px #ffffff);
 }
