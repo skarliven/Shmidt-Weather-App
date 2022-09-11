@@ -1,4 +1,3 @@
-//Feature #1: Highlighted Cities Link Display//
 //New York//
 function getNy(event) {
   event.preventDefault();
@@ -59,7 +58,7 @@ function getNd(event) {
 let newDelhiLink = document.querySelector("#new-delhi");
 newDelhiLink.addEventListener("click", getNd);
 
-// Feature #3: Date & Time //
+//Date & Time//
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -138,6 +137,7 @@ function showWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+//Search engine//
 function searchCity(city) {
   let apiKey = "171ddbb0656a18a2767a1d21dcc89d04";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -153,6 +153,7 @@ function enterCity(event) {
 let searchForm = document.querySelector("#search-city-form");
 searchForm.addEventListener("submit", enterCity);
 
+//Fahrenheit & Celsius//
 function showFahrenheitTemp(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#degrees");
