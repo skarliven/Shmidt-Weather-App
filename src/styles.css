@@ -120,7 +120,6 @@ a.temp-difference:hover {
 }
 
 .weather-forecast {
-  margin-top: 20;
   text-align: center;
   color: #6c757d;
 }
@@ -130,9 +129,6 @@ a.temp-difference:hover {
 }
 .weather-forecast-temperatures {
   font-size: 13px;
-}
-
-.weather-forecast-temperature-max {
 }
 
 .weather-forecast-temperature-min {
