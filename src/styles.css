@@ -119,6 +119,25 @@ a.temp-difference:hover {
   font-size: 18px;
 }
 
+.weather-forecast {
+  margin-top: 20;
+  text-align: center;
+  color: #6c757d;
+}
+.weather-forecast-day {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-max {
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
 small {
   margin-top: 12px;
   display: block;
