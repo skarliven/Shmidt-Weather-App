@@ -112,7 +112,6 @@ a.temp-difference:hover {
 
 .feels {
   list-style: none;
-  padding: 0;
   color: #6c757d;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
@@ -124,18 +123,20 @@ a.temp-difference:hover {
   color: #6c757d;
 }
 .weather-forecast-day {
-  font-size: 16px;
-  opacity: 0.5;
+  font-size: 17px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  opacity: 0.8;
 }
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 small {
-  margin-top: 12px;
+  margin-top: 7px;
   display: block;
   text-align: center;
   color: #6c757d;
