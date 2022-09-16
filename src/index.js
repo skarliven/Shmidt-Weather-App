@@ -209,6 +209,7 @@ function enterCity(event) {
   event.preventDefault();
   let input = document.querySelector("#city-input");
   searchCity(input.value);
+  input.value = "";
 }
 
 let searchForm = document.querySelector("#search-city-form");
